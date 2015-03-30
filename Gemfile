@@ -1,3 +1,5 @@
-source 'https://rubygems.org'
-gem 'rspec'
-gem 'rspec-given'
+source "https://rubygems.org"
+
+gem "guard"
+gem "guard-minitest"
+gem "minitest"
