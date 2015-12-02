@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-require 'minitest/pride'
 require './lib/gilded_rose'
 
 describe "#update_quality" do
