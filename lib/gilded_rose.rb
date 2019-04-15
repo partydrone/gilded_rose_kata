@@ -3,6 +3,8 @@ def update_quality(items)
     case item.name
     when 'NORMAL ITEM'
       return update_normal_quality(item)
+    when 'Aged Brie'
+      return update_brie_quality(item)
     end
 
     if item.name != 'Aged Brie' && item.name != 'Backstage passes to a TAFKAL80ETC concert'
@@ -56,6 +58,16 @@ def update_normal_quality(item)
   return if item.quality == 0
   item.quality -= 1
   item.quality -= 1 if item.sell_in <= 0
+end
+
+def update_brie_quality(item)
+  if item.sell_in > 0
+    item.quality += 1 unless item.quality == 50
+  end
+  if item.sell_in == 0
+    item.quality += 2
+  end
+  item.sell_in -= 1
 end
 
 # DO NOT CHANGE THINGS BELOW -----------------------------------------
