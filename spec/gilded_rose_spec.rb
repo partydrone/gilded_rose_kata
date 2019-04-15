@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require 'spec_helper'
 require './lib/gilded_rose'
 
 describe "#update_quality" do
