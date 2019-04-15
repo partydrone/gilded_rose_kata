@@ -210,22 +210,22 @@ describe "#update_quality" do
     end
   end
 
-  describe "with several objects" do
-    let(:items) {
-      [
-        Item.new("NORMAL ITEM", 5, 10),
-        Item.new("Aged Brie", 3, 10)
-      ]
-    }
+  # describe "with several objects" do
+  #   let(:items) {
+  #     [
+  #       Item.new("NORMAL ITEM", 5, 10),
+  #       Item.new("Aged Brie", 3, 10)
+  #     ]
+  #   }
 
-    before do
-      update_quality(items)
-    end
+  #   before do
+  #     update_quality(items)
+  #   end
 
-    specify { items[0].quality.must_equal 9 }
-    specify { items[0].sell_in.must_equal 4 }
+  #   specify { items[0].quality.must_equal 9 }
+  #   specify { items[0].sell_in.must_equal 4 }
 
-    specify { items[1].quality.must_equal 11 }
-    specify { items[1].sell_in.must_equal 2 }
-  end
+  #   specify { items[1].quality.must_equal 11 }
+  #   specify { items[1].sell_in.must_equal 2 }
+  # end
 end
